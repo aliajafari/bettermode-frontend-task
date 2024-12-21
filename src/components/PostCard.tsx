@@ -17,7 +17,7 @@ export default function PostCard({
 }: PostCardProps) {
   return (
     <div className="md:basis-1/4 basis-1/4 min-[320px]:basis-full p-1 flex-col">
-      <div className="border border-gray-200 rounded-lg bg-white shadow-sm p-4">
+      <div className="border border-gray-200 rounded-lg bg-white shadow-sm p-4 h-full	">
         <img
           src={thumbnail || placeHolderPostImage}
           alt={title}

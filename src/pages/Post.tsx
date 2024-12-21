@@ -19,8 +19,6 @@ export default function Post() {
     }
   }, [data]);
 
-  useEffect(() => {}, [likes]);
-
   const handleReaction = async () => {
     if (id) {
       try {
