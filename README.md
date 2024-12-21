@@ -1,51 +1,36 @@
-# React + TypeScript + Vite
+# BetterMode Frontend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+BetterMode Frontend Assignment is a React application that displays posts on the Home Page and shows items.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Instructions
 
-## Expanding the ESLint configuration
+To run the application locally, follow these steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. Clone the repository
 
-- Configure the top-level `parserOptions` property like this:
+Clone the repository to your local machine:
+git clone https://github.com/aliajafari/bettermode-frontend-task.git
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 2. Install dependencies
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Navigate to the project directory and install the necessary dependencies using npm:
+cd bettermode-frontend-task npm install
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 3. Create a `.env` file
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# bettermode-frontend-task
+In the root directory of the project, create a `.env` file if it doesn't already exist.
+
+### 4. Add necessary environment variables
+
+Inside the `.env` file, add the following lines:
+
+Add `https://api.bettermode.com/` on VITE_API_URL variable and `your-token-here` on VITE_TOKEN variable
+
+### 5. Run the development server
+
+Once you've set up the `.env` file, run the following command to start the development server:
+npm run dev
+
+This will start the application in development mode. You can view the app in your browser at `http://localhost:5173` (or the port configured in your project).
